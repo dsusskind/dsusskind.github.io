@@ -1,0 +1,18 @@
+body {
+    font-family:verdana;
+    font-size:18px;
+    letter-spacing: 8px;
+    line-height: 40px;
+    color: #1a1e1d;
+    margin: auto;
+    text-align: center;
+    padding-top: 200;
+    background-color: #f2faf0;
+    text-transform: uppercase;
+}
+
+.smaller-type {
+    font-size:18px; 
+    text-transform: none;
+    letter-spacing: .5px;
+}
