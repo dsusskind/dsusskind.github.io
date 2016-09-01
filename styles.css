@@ -1,17 +1,50 @@
 body {
-    font-family:verdana;
-    font-size:18px;
-    letter-spacing: 8px;
+    font-family: verdana;
+    font-size: 18px;
     line-height: 40px;
-    color: #1a1e1d;
+    color: #000000;
     margin: auto;
     text-align: center;
-    padding-top: 200;
-    background-color: #f2faf0;
-    text-transform: uppercase;
+    background-color: #ffffff;
 }
 
-.smaller-type {
+.pink-bg {
+    background-color: #fff2f0;
+}
+
+nav {
+    background-color: #fd4167;
+    /* overflow: auto so that the nav floats have proper height, see https://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/ */
+    overflow: auto;
+}
+
+nav li {
+    display:inline-block;
+}
+
+nav li a {
+    color:#ffffff;
+    text-decoration: none;
+    padding: 12px 20px;
+}
+
+header section {
+    clear: both;
+}
+
+.left {
+    float: left;
+    width: 50%;
+    padding: 0;
+}
+
+.right {
+    float: left;
+    width: 50%;
+    padding: 0;
+}
+
+.paragraph-content {
     font-size:18px; 
     text-transform: none;
     letter-spacing: .5px;
