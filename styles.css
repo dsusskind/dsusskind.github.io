@@ -1,5 +1,6 @@
 body {
-    font-family: verdana;
+    font-family: "soleil",sans-serif;
+    font-weight: 300;
     font-size: 18px;
     line-height: 40px;
     color: #000000;
@@ -10,42 +11,102 @@ body {
 
 .pink-bg {
     background-color: #fff2f0;
+    color: #ff073a;
+}
+
+section {
+    /* overflow: auto to "clear" previous floats, see https://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/ */
+    overflow: auto;
 }
 
 nav {
     background-color: #fd4167;
     /* overflow: auto so that the nav floats have proper height, see https://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/ */
     overflow: auto;
+    /* use this if using inline-block method...
+    white-space: nowrap; */
 }
 
 nav li {
-    display:inline-block;
+    display: inline-block;
 }
 
 nav li a {
-    color:#ffffff;
+    color: #ffffff;
     text-decoration: none;
     padding: 12px 20px;
 }
 
-header section {
-    clear: both;
+/* Alternate solution for top nav without floats
+.half {
+    display: inline-block;
+    width: 50%;
+    padding: 0;
+} */
+
+/* Alternate solution for top nav using left and right classes
+.left2 {
+    display: inline-block;
+    width: 50%;
+    padding: 0;
+    margin-right:-4px;
 }
 
-.left {
+.right2 {
+    display: inline-block;
+    width: 50%;
+    padding: 0;
+    margin-left:-4px;
+} */
+
+.left-nav {
     float: left;
     width: 50%;
     padding: 0;
 }
 
-.right {
+.right-nav {
     float: left;
     width: 50%;
     padding: 0;
+}
+
+.left-events {
+    float: left;
+    width: 40%;
+}
+
+.right-events {
+    float: right;
+    width: 40%;
+    border-width: 0 0 0 1px;
+    border-color: #fd4167;
+    border-style: solid;
+    padding-left: 20px;
+}
+
+.understroke {
+    border-width: 0 0 4px 0;
+    border-color: #fd4167;
+    width: 80px;
 }
 
 .paragraph-content {
     font-size:18px; 
     text-transform: none;
     letter-spacing: .5px;
+}
+
+/* TODO see if there is a better way to have bg go 100% and content be narrower */
+.width-60 {
+    width: 60%;
+    margin: auto;
+}
+
+h2 {
+    font-family: "abril-fatface",serif;
+}
+
+h3 {
+    font-family: "abril-fatface",serif;
 }
