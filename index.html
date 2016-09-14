@@ -145,26 +145,64 @@
             <div class="clearfix margin-bottom-5"></div>
         </section>
         <section>
-            <h2 class="margin-bottom-25px">Please RSVP</h2>
-            <p>Are you coming? We really hope you are! We hate rejection.<br>
-                Please respond by March 18, 2017.</p>
-            <form method="POST" action="http://formspree.io/danviv.wedding@gmail.com">
-                <input type="text" name="guest_names" placeholder="Your name" required>
-                <input type="number" name="num_guests" placeholder="# of guests" required>
-                <input type="radio" name="food" value="meat" checked> Gimme da meat<br>
-                <input type="radio" name="food" value="veggie"> No animals, please<br>
-                <!-- <input type="hidden" name="_next" value="http://www.danandviv.com" /> -->
-                <input type="hidden" name="_next" value="http://127.0.0.1:64518/index.html" />
-                <input type="hidden" name="_subject" value="Wedding RSVP Submission" />
-                <button type="submit">Submit</button>
-            </form>
+            <a name="rsvp"></a>
+            <div class="width-60">
+                <h2 class="margin-bottom-25px">Please RSVP</h2>
+                <p class="margin-bottom-50px">Are you coming? We really hope you are! We hate rejection.<br>
+                    Please respond by March 18, 2017.</p>
+                <form method="POST" action="http://formspree.io/danviv.wedding@gmail.com">
+                    <h3 class="input-overlay">M</h3>
+                    <input class="input margin-bottom-25px" type="text" name="guest_names" placeholder="please enter name(s)" required>
+                    <br>
+                    <h3 class="input-overlay">No.</h3>
+                    <input class="input margin-bottom-70px" type="number" name="num_guests" placeholder="number of guests attending" required>
+
+                    <h4 class="margin-bottom-0">I’ll be at these events</h4>
+                    <p class="color-gray margin-bottom-25px"><em>please check box(es)</em></p>
+
+                    <div class="floater">
+                        <input class="check" type="checkbox" name="rehearsal_dinner" id="rehearsal_dinner"><label class="box" for="rehearsal_dinner"></label>
+                        <span class="weight-bold line-height-25">Rehearsal Dinner<br><em class="weight-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thursday</em></span>
+                    </div>
+
+                    <div class="floater">
+                        <input class="check" type="checkbox" name="welcome_drinks" id="welcome_drinks"><label class="box" for="welcome_drinks"></label>
+                        <span class="weight-bold line-height-25">Welcome Drinks<br><em class="weight-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Friday</em></span>
+                    </div>
+
+                    <div class="floater">
+                        <input class="check" type="checkbox" name="wedding" id="wedding"><label class="box" for="wedding"></label>
+                        <span class="weight-bold line-height-25">The Wedding<br><em class="weight-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Saturday</em></span>
+                    </div>
+                    <div class="clearfix margin-bottom-70px"></div>
+
+                    <h4 class="margin-bottom-15px">I like my burgers...</h4>
+                    <div class="width-65">
+                        <div class="left-food">
+                            <input class="input input-small margin-bottom-15px" type="text" name="meat_initials" placeholder="please initial" required>
+                            <br>
+                            <p class="centered weight-bold">With meat, thanks!<br><em class="weight-300">( incl. pork )</em></p>
+                        </div>
+                        <div class="right-food">
+                            <input class="input input-small margin-bottom-15px" type="text" name="veggie_initials" placeholder="please initial" required>
+                            <br>
+                            <p class="centered weight-bold">Just veggies, please!<br><em class="weight-300">(vegetarian)</em></p>
+                        </div>
+                    </div>
+                    <div class="clearfix margin-bottom-50px"></div>
+
+                    <!-- <input type="hidden" name="_next" value="http://www.danandviv.com" /> -->
+                    <input type="hidden" name="_next" value="http://127.0.0.1:64518/index.html#rsvp" />
+                    <input type="hidden" name="_subject" value="Wedding RSVP Submission" />
+                    <button type="submit">Send response</button>
+                </form>
+            </div>
         </section>
         <section>
             <h2 class="margin-bottom-25px">Registry</h2>
             <p class="margin-bottom-50px width-50">Wow you made it this far! You must really love us. We’ll quiz you on all this information at Welcome Drinks. Just kidding.<br><br><em>Registry links coming soon. Don't worry, Mom!</em></p>
         </section>
         <footer>
-            <p>I am a footer?</p>
             <p class="color-pink"><br><br>&#x1F436; &hearts; &#x1F430;</p>
         </footer>
     </body>
