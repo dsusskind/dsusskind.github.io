@@ -1,3 +1,12 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline; 
+}
+
 body {
     font-family: "soleil",sans-serif;
     font-weight: 300;
@@ -30,7 +39,7 @@ h2 {
     text-transform: uppercase;
     line-height: 28px;
     border-width: 0 0 4px 0;
-    border-color: #ffcabd;
+    border-color: #ffcadb;
     border-style: solid;
     padding-left: 4px;
     display: inline-block;
@@ -60,6 +69,20 @@ h4 {
 
 p {
     line-height: 40px;
+}
+
+img {
+    margin: auto;
+    margin-top: 180px;
+    margin-bottom: 100px;
+}
+
+section {
+    /* overflow: auto to "clear" previous floats, see https://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/ */
+    overflow: auto;
+
+    margin-top: 5%;
+    margin-bottom: 10%;
 }
 
 a {
@@ -130,6 +153,22 @@ a {
     margin-bottom: 10%;
 }
 
+.margin-bottom-25px {
+    margin-bottom: 25px;
+}
+
+.margin-bottom-50px {
+    margin-bottom: 50px;
+}
+
+.margin-bottom-70px {
+    margin-bottom: 70px;
+}
+
+.margin-top-15 {
+    margin-top: 15%;
+}
+
 .pink-bg {
     background-color: #fff7f8;
     color: #ee3a40;
@@ -145,13 +184,7 @@ a {
     display: inline-block;
 }
 
-section {
-    /* overflow: auto to "clear" previous floats, see https://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/ */
-    overflow: auto;
 
-    margin-top: 5%;
-    margin-bottom: 10%;
-}
 
 /* https://css-tricks.com/snippets/css/clear-fix/ */
 .clearfix:after {
@@ -261,11 +294,31 @@ nav li a {
     border-width: 0 0 0 1px;
     border-color: #ffcabd;
     border-style: solid;
+    padding-top: 25px;
     padding-left:5%;
     -moz-border-image: -moz-linear-gradient(top, #ff86bb 0%, #ffe8e8 100%);
     -webkit-border-image: -webkit-linear-gradient(top, #ff86bb 0%, #ffe8e8 100%);
     border-image: linear-gradient(top, #ff86bb 0%, #ffe8e8 100%);
     border-image-slice: 1;
+}
+
+.left-to-do {
+    float: left;
+    width: 40.5%;
+    padding-right: 9%;
+}
+
+.right-to-do {
+    float: left;
+    width: 42.5%;
+    border-width: 0 0 0 1px;
+    border-color: #ffcabd;
+    border-style: solid;
+    padding-left: 7%;
+    -moz-border-image: -moz-linear-gradient(top, #ff86bb 0%, #ffe8e8 100%);
+    -webkit-border-image: -webkit-linear-gradient(top, #ff86bb 0%, #ffe8e8 100%);
+    border-image: linear-gradient(top, #ff86bb 0%, #ffe8e8 100%);
+    border-image-slice: 1;   
 }
 
 .stroke {
@@ -288,7 +341,15 @@ letter-spacing: 1.5px;
 
 .width-50 {
     width: 50%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.width-55 {
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 55px;
 }
 
