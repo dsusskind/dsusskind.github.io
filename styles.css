@@ -71,10 +71,11 @@ p {
     line-height: 40px;
 }
 
-img {
-    margin: auto;
-    margin-top: 180px;
-    margin-bottom: 100px;
+#header-img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 170px;
+    margin-bottom: 180px;
 }
 
 section {
