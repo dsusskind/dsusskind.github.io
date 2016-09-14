@@ -2,16 +2,95 @@ body {
     font-family: "soleil",sans-serif;
     font-weight: 300;
     font-size: 18px;
+    letter-spacing:1.4px;
     line-height: 40px;
-    color: #000000;
+    color: #ee3a40;
     margin: auto;
     text-align: center;
-    background-color: #ffffff;
+
+    /* Make the whole thing pink for now
+    background-color: #ffffff;*/
+    background-color: #fff7f8;
+}
+
+h1 {
+    font-family: "abril-fatface",serif;
+    font-size: 44px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 3.8px;
+    text-align: center;
+}
+
+h2 {
+    font-family: "soleil",sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    line-height: 28px;
+    border-width: 0 0 4px 0;
+    border-color: #ee3a40;
+    border-style: solid;
+    padding-left:4px;
+    display: inline-block;
+}
+
+h3 {
+    font-family: "abril-fatface",serif;
+    font-size: 44px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 2.5px;
+    margin-top: 10px;
+    margin-bottom: 24px;
+}
+
+h4 {
+    font-family: "abril-fatface",serif;
+    font-size: 30px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 1.7px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.font-soleil {
+    font-family: "soleil",sans-serif;
+}
+
+.font-abrilfatface {
+    font-family: "abril-fatface",serif;
+}
+
+.weight-600 {
+    font-weight: 600;
+}
+.weight-bold {
+    font-weight: bold;
+}
+
+.size-16 {
+    font-size: 16px;
+}
+
+.size-22 {
+    font-size: 22px;
+} 
+
+.color-black {
+    color: black;
 }
 
 .pink-bg {
-    background-color: #fff2f0;
-    color: #ff073a;
+    background-color: #fff7f8;
+    color: #ee3a40;
 }
 
 section {
@@ -25,6 +104,9 @@ nav {
     overflow: auto;
     /* use this if using inline-block method...
     white-space: nowrap; */
+
+    /* Hiding the nav for now */
+    display: none;
 }
 
 nav li {
@@ -37,14 +119,14 @@ nav li a {
     padding: 12px 20px;
 }
 
-/* Alternate solution for top nav without floats
+/* Alternate solution for top nav without floats */
 .half {
     display: inline-block;
     width: 50%;
     padding: 0;
-} */
+} 
 
-/* Alternate solution for top nav using left and right classes
+/* Alternate solution for top nav using left and right classes */
 .left2 {
     display: inline-block;
     width: 50%;
@@ -57,7 +139,7 @@ nav li a {
     width: 50%;
     padding: 0;
     margin-left:-4px;
-} */
+}
 
 .left-nav {
     float: left;
@@ -71,24 +153,37 @@ nav li a {
     padding: 0;
 }
 
+
 .left-events {
     float: left;
-    width: 40%;
+    width: 50%;
 }
 
 .right-events {
-    float: right;
-    width: 40%;
+    float: left;
+    width: 49%;
     border-width: 0 0 0 1px;
     border-color: #fd4167;
     border-style: solid;
-    padding-left: 20px;
+    padding-left: 0px;
+}
+
+.left-events p {
+    margin-bottom: 75px;
+}
+
+.right-events p {
+    margin-top: -10px;
 }
 
 .understroke {
     border-width: 0 0 4px 0;
-    border-color: #fd4167;
+    border-color: #ee3a40;
     width: 80px;
+}
+
+#our-story {
+    display: none;
 }
 
 .paragraph-content {
@@ -101,12 +196,6 @@ nav li a {
 .width-60 {
     width: 60%;
     margin: auto;
+    margin-top: 55px;
 }
 
-h2 {
-    font-family: "abril-fatface",serif;
-}
-
-h3 {
-    font-family: "abril-fatface",serif;
-}
