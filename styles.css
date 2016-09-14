@@ -3,13 +3,10 @@ body {
     font-weight: 300;
     font-size: 18px;
     letter-spacing:1.4px;
-    color: #ee3a40;
+    color: #ffffff;
     margin: auto;
     text-align: center;
-
-    /* Make the whole thing pink for now
-    background-color: #ffffff;*/
-    background-color: #fff7f8;
+    background-color: #1d1f26;    
 }
 
 
@@ -33,7 +30,7 @@ h2 {
     text-transform: uppercase;
     line-height: 28px;
     border-width: 0 0 4px 0;
-    border-color: #ee3a40;
+    border-color: #ffcabd;
     border-style: solid;
     padding-left: 4px;
     display: inline-block;
@@ -67,7 +64,7 @@ p {
 
 a {
     text-decoration: none; 
-    color: #ee3a40;
+    color: #ffffff;
     margin: auto;
     text-align: center;
 
@@ -78,10 +75,10 @@ a {
     font-weight: bold;
     font-size: 18px;
     letter-spacing:1.4px;
-    color: #ee3a40;
+    color: #ffffff;
     text-decoration: none;
     border-width: 0 0 2px 0;
-    border-color: #ee3a40;
+    border-color: #ffcabd;
     border-style: solid;
     padding-left: 1.4px;
 }
@@ -121,6 +118,14 @@ a {
     color: black;
 }
 
+.color-pink {
+    color: #ff72b2;
+}
+
+.margin-bottom-5 {
+    margin-bottom: 5%;
+}
+
 .margin-bottom-10 {
     margin-bottom: 10%;
 }
@@ -130,12 +135,22 @@ a {
     color: #ee3a40;
 }
 
+.justified {
+    text-align: justify;
+    display: inline-block;
+}
+
+.centered {
+    text-align: center;
+    display: inline-block;
+}
+
 section {
     /* overflow: auto to "clear" previous floats, see https://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/ */
     overflow: auto;
-    
+
     margin-top: 5%;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
 }
 
 /* https://css-tricks.com/snippets/css/clear-fix/ */
@@ -217,9 +232,12 @@ nav li a {
     padding-left: 7%;
     padding-right: 16.5%;
     border-width: 0 0 0 1px;
-    border-color: #fd4167;
+    border-color: #ffcabd;
     border-style: solid;
-
+    -moz-border-image: -moz-linear-gradient(top, #ff86bb 0%, #ffe8e8 100%);
+    -webkit-border-image: -webkit-linear-gradient(top, #ff86bb 0%, #ffe8e8 100%);
+    border-image: linear-gradient(top, #ff86bb 0%, #ffe8e8 100%);
+    border-image-slice: 1;
 }
 
 .left-events p {
@@ -241,15 +259,24 @@ nav li a {
     float: left;
     width: 44.5%;
     border-width: 0 0 0 1px;
-    border-color: #fd4167;
+    border-color: #ffcabd;
     border-style: solid;
     padding-left:5%;
+    -moz-border-image: -moz-linear-gradient(top, #ff86bb 0%, #ffe8e8 100%);
+    -webkit-border-image: -webkit-linear-gradient(top, #ff86bb 0%, #ffe8e8 100%);
+    border-image: linear-gradient(top, #ff86bb 0%, #ffe8e8 100%);
+    border-image-slice: 1;
 }
 
 .stroke {
     border-width: 0 0 4px 0;
-    border-color: #ee3a40;
+    border-color: #ffcabd;
     width: 80px;
+}
+
+.nostroke {
+    border-style: none;
+    padding-left: 0px;
 }
 
 /*
@@ -259,10 +286,16 @@ text-transform: none;
 letter-spacing: 1.5px;
 } */
 
-/* TODO see if there is a better way to have bg go 100% and content be narrower */
 .width-50 {
     width: 50%;
     margin: auto;
+    margin-top: 55px;
+}
+
+.width-60 {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 55px;
 }
 
