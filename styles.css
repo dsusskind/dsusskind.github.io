@@ -15,7 +15,7 @@ body {
     color: #ffffff;
     margin: auto;
     text-align: center;
-    background-color: #1d1f26;    
+    background-color: #1d1f26;
 }
 
 
@@ -152,7 +152,8 @@ a {
 }
 
 .color-gray {
-    color: #737782;
+    color: #96979A;
+    font-size: 16px;
 }
 
 .color-pink {
@@ -278,12 +279,14 @@ nav li a {
     margin: auto;
     margin-top: 75px;
     width: 1001px;
+    
 }
 
 .left-events {
     float: left;
     width: 500px;
  /*   margin-left:10px;*/
+    
 }
 
 .right-events {
@@ -298,6 +301,7 @@ nav li a {
     -webkit-border-image: -webkit-linear-gradient(top, #ff86bb 0%, #ffe8e8 100%);
     border-image: linear-gradient(top, #ff86bb 0%, #ffe8e8 100%);
     border-image-slice: 1;
+    
 }
 
 .left-events p {
@@ -466,6 +470,13 @@ button {
     cursor:pointer;
 }
 
+button:hover {
+    background: solid;
+    background: -moz-linear-gradient(left bottom, #ff86bb 0%, #ffe8e8 100%);
+    background: -webkit-linear-gradient(left bottom, #ff86bb 0%, #ffe8e8 100%);
+    background: linear-gradient(left bottom, #ff86bb 0%, #ffe8e8 100%);
+}
+
 .floater {
     float: left;
     text-align: left;
@@ -498,4 +509,8 @@ input[type="checkbox"]:checked + label {
 }
 #conch-p {
     margin-bottom: 0px;
+}
+
+#content {
+    width:1400px;
 }
