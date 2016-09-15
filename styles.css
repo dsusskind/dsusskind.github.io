@@ -157,7 +157,7 @@ a {
 }
 
 .color-pink {
-    color: #ff72b2;
+    color: #ffffff;
 }
 
 .margin-bottom-5 {
@@ -521,4 +521,17 @@ input[type="checkbox"]:checked + label {
 .width-882px {
     width: 882px;
     margin: 0 auto;
+}
+
+.registry-img {
+    margin-bottom: 70px;
+    display: block;
+}
+
+footer {
+    background: solid;
+    background: -moz-linear-gradient(left bottom, #ff86bb 0%, #ffe8e8 100%);
+    background: -webkit-linear-gradient(left bottom, #ff86bb 0%, #ffe8e8 100%);
+    background: linear-gradient(left bottom, #ff86bb 0%, #ffe8e8 100%);
+    height: 40px;
 }
