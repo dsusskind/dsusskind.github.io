@@ -335,17 +335,19 @@ nav li a {
 
 .left-to-do {
     float: left;
-    width: 40.5%;
-    padding-right: 9%;
+    width: 350px;
+    margin: auto;
+    padding-right: 92px;
+
 }
 
 .right-to-do {
     float: left;
-    width: 42.5%;
+    width: 358px;
     border-width: 0 0 0 1px;
     border-color: #ffcabd;
     border-style: solid;
-    padding-left: 7%;
+    padding-left: 81px;
     -moz-border-image: -moz-linear-gradient(top, #ff86bb 0%, #ffe8e8 100%);
     -webkit-border-image: -webkit-linear-gradient(top, #ff86bb 0%, #ffe8e8 100%);
     border-image: linear-gradient(top, #ff86bb 0%, #ffe8e8 100%);
@@ -513,4 +515,10 @@ input[type="checkbox"]:checked + label {
 
 #content {
     width:1400px;
+    margin: auto;
+}
+
+.width-882px {
+    width: 882px;
+    margin: 0 auto;
 }
