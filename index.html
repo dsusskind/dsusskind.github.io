@@ -161,10 +161,10 @@
                     <h3 class="line-height-60 margin-bottom-0" id="you-rsvped">You’re the best!<br>Thanks for RSVP-ing.</h3>
                     <form id= "rsvp-form" method="POST" action="http://formspree.io/danviv.wedding@gmail.com">
                         <h3 class="input-overlay">M</h3>
-                        <input class="input margin-bottom-25px" type="text" name="guest_names" placeholder="please enter name(s)" required>
+                        <input class="input margin-bottom-25px" type="text" name="guest_names" placeholder="please enter name(s)" autocomplete="off" required>
                         <br>
                         <h3 class="input-overlay">No.</h3>
-                        <input class="input margin-bottom-70px" type="number" name="num_guests" placeholder="number of guests attending" required>
+                        <input class="input margin-bottom-70px" type="text" name="num_guests" placeholder="number of guests attending" autocomplete="off" required>
 
                         <h4 class="margin-bottom-0">I’ll be at these events</h4>
                         <p class="color-gray margin-bottom-24px"><em>please check box(es)</em></p>
@@ -188,12 +188,12 @@
                         <h4 class="margin-bottom-15px">I like my burgers...</h4>
                         <div class="width-65">
                             <div class="left-food">
-                                <input class="input input-small margin-bottom-10px" type="text" name="meat_initials" placeholder="please initial">
+                                <input class="input input-small margin-bottom-10px" type="text" name="meat_initials" placeholder="please initial" autocomplete="off">
                                 <br>
                                 <p class="centered weight-bold line-height-1p8">With meat, thanks!<br><em class="weight-300">( incl. pork )</em></p>
                             </div>
                             <div class="right-food">
-                                <input class="input input-small margin-bottom-10px" type="text" name="veggie_initials" placeholder="please initial">
+                                <input class="input input-small margin-bottom-10px" type="text" name="veggie_initials" placeholder="please initial" autocomplete="off">
                                 <br>
                                 <p class="centered weight-bold line-height-1p8">Just veggies, please!<br><em class="weight-300">(vegetarian)</em></p>
                             </div>
