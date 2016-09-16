@@ -113,7 +113,7 @@
                 <p class="margin-bottom-50px width-50">So, we obviously love going to Key West. Here is a list of our favorite places to eat, drink, and unwind.</p>
                 <div class="width-882px">
                     <div class="left-to-do">
-                        <h3 class="margin-bottom-50px">The Bride's favorites</h3>
+                        <h3 class="margin-bottom-50px">The Bride’s favorites</h3>
                         <p class="margin-bottom-70px"><span class="size-22 weight-bold">B.O.'s Fish Wagon</span><br>
                             Order the blackened mahi-mahi sandwich with key lime aioli.</p>
 
@@ -130,7 +130,7 @@
                             When we aren’t getting married at the Fort, you can find us biking to Fort Zach’s beach. It’s the best one in our books.</p>
                     </div>
                     <div class="right-to-do">
-                        <h3 class="margin-bottom-50px">The Groom's favorites</h3>
+                        <h3 class="margin-bottom-50px">The Groom’s favorites</h3>
                         <p class="margin-bottom-50px"><span class="size-22 weight-bold">Bien KW (aka Paseo’s)</span><br>
                             They might have changed the name but it doesn’t change my love for the The Press sandwich. Order a corn on the cob on the side.</p>
 
@@ -153,12 +153,13 @@
                 <div class="clearfix"></div>
             </section>
             <section class="margin-top-15">
-                <a name="rsvp"></a>
+                <a name="thanks"></a>
                 <div class="width-60">
                     <h2 class="margin-bottom-25px">Please RSVP</h2>
                     <p class="margin-bottom-50px">Are you coming? We really hope you are! We hate rejection.<br>
                         Please respond by March 18, 2017.</p>
-                    <form method="POST" action="http://formspree.io/danviv.wedding@gmail.com">
+                    <h3 class="line-height-60 margin-bottom-0" id="you-rsvped">You’re the best!<br>Thanks for RSVP-ing.</h3>
+                    <form id= "rsvp-form" method="POST" action="http://formspree.io/danviv.wedding@gmail.com">
                         <h3 class="input-overlay">M</h3>
                         <input class="input margin-bottom-25px" type="text" name="guest_names" placeholder="please enter name(s)" required>
                         <br>
@@ -196,13 +197,20 @@
                                 <br>
                                 <p class="centered weight-bold">Just veggies, please!<br><em class="weight-300">(vegetarian)</em></p>
                             </div>
-                        </div>
-                        <div class="clearfix margin-bottom-50px"></div>
+                            <div class="clearfix margin-bottom-50px"></div>
 
-                        <input type="hidden" name="_next" value="http://www.danandviv.com#rsvp" />
-                        <input type="hidden" name="_subject" value="Wedding RSVP Submission" />
-                        <button type="submit">Send response</button>
+                            <input type="hidden" name="_next" value="http://www.danandviv.com?rsvp#thanks" />
+                            <input type="hidden" name="_subject" value="Wedding RSVP Submission" />
+                            <input type="hidden" name="_subject" value="Just a test" />
+                            <button type="submit">Send response</button>
+                        </div>
                     </form>
+                    <script>
+                        if (window.location.search === "?rsvp") {
+                            document.getElementById("you-rsvped").style.display = "block";
+                            document.getElementById("rsvp-form").style.display = "none";
+                        }
+                    </script>
                 </div>
             </section>
             <section class="margin-top-15">
