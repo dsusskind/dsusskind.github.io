@@ -114,7 +114,7 @@
                 <div class="width-882px">
                     <div class="left-to-do">
                         <h3 class="margin-bottom-50px">The Bride’s favorites</h3>
-                        <p class="margin-bottom-70px"><span class="size-22 weight-bold">B.O.'s Fish Wagon</span><br>
+                        <p class="margin-bottom-70px"><span class="size-22 weight-bold">B.O.’s Fish Wagon</span><br>
                             Order the blackened mahi-mahi sandwich with key lime aioli.</p>
 
                         <p class="margin-bottom-70px"><span class="size-22 weight-bold">Louie’s Backyard</span><br>
@@ -143,7 +143,7 @@
                         <p class="margin-bottom-50px"><span class="size-22 weight-bold">Dante’s</span><br>
                             Order food, drinks, and hop in the pool while listening to music from the live DJ.</p>
 
-                        <p class="margin-bottom-50px"><span class="size-22 weight-bold">Mattheessen's</span><br>
+                        <p class="margin-bottom-50px"><span class="size-22 weight-bold">Mattheessen’s</span><br>
                             OMG GIANT COOKIE.</p>
 
                         <p class="margin-bottom-25px"><span class="size-22 weight-bold">Key Lime Pie Factory</span><br>
@@ -151,63 +151,113 @@
                     </div>
                 </div>
                 <div class="clearfix"></div>
+                <a name="thanks"></a>
             </section>
             <section class="margin-top-15">
-                <a name="thanks"></a>
                 <div class="width-60">
                     <h2 class="margin-bottom-25px">Please RSVP</h2>
-                    <p class="margin-bottom-50px">Are you coming? We really hope you are! We hate rejection.<br>
-                        Please respond by March 18, 2017.</p>
-                    <h3 class="line-height-60 margin-bottom-0" id="you-rsvped">You’re the best!<br>Thanks for RSVP-ing.</h3>
-                    <form id= "rsvp-form" method="POST" action="http://formspree.io/danviv.wedding@gmail.com">
-                        <h3 class="input-overlay">M</h3>
-                        <input class="input margin-bottom-25px" type="text" name="guest_names" placeholder="please enter name(s)" autocomplete="off" required>
-                        <br>
-                        <h3 class="input-overlay">No.</h3>
-                        <input class="input margin-bottom-70px" type="text" name="num_guests" placeholder="number of guests attending" autocomplete="off" required>
 
-                        <h4 class="margin-bottom-0">I’ll be at these events</h4>
-                        <p class="color-gray margin-bottom-24px"><em>please check box(es)</em></p>
+                    <form id="rsvp-form" onsubmit="doPost(this); return false;">
 
-                        <div class="floater">
-                            <input class="check" type="checkbox" name="rehearsal_dinner" id="rehearsal_dinner"><label class="box" for="rehearsal_dinner"></label>
-                            <span class="weight-bold line-height-25">Rehearsal Dinner<br><em class="weight-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thursday</em></span>
+                        <script>
+                            function doPost(form) {
+                                var XHR = new XMLHttpRequest();
+                                var FD = new FormData(form);
+                                var attending = FD.get("attending");
+
+                                XHR.open("POST", "https://script.google.com/macros/s/AKfycbzJHAhUEVpM7G9eEzP1qsZwk09HGRpZj65Urg6YZKREfxXp6xI/exec", true);
+                                
+                                XHR.onreadystatechange = processResponse;
+                                XHR.send(FD);
+                                
+                                function processResponse() {
+                                    // if not DONE (state = 4) don't display confirmation yet
+                                    if (XHR.readyState != 4) {
+                                        return;
+                                    }
+                                    
+                                    if (attending === "YES") {
+                                        window.location.replace("/?rsvp-yes#thanks");
+                                    } else if (attending === "NO") {
+                                        window.location.replace("/?rsvp-no#thanks");
+                                    }
+                                }
+                            }
+                        </script>
+
+                        <div id="initial-rsvp-form">
+                            <p class="margin-bottom-50px">Are you coming? We really hope you are!<br>Please reply by March 4, 2017.</p>
+                            <h3 class="input-overlay">M</h3>
+                            <input class="input margin-bottom-25px" type="text" id="guest-names" name="guest_names" placeholder="please enter name(s)" autocomplete="off" required>
+                            <br>
+                            <h3 class="input-overlay">No.</h3>
+                            <input class="input margin-bottom-50px" id="num-guests" type="text" name="num_guests" placeholder="number of guests" autocomplete="off" required>
+                            <br>
+                            <button type="submit" name="attending" value="NO" id="not-attending">Sorry, can’t make it!</button>
+
+                            <button type="button" onclick="continueRSVP()">Packing my bags!</button>
+                            <script>
+                                function continueRSVP() {
+                                    if (!document.getElementById("guest-names").checkValidity() ||
+                                        !document.getElementById("num-guests").checkValidity()) {
+                                        // trigger validation failure by clicking submit
+                                        document.getElementById("not-attending").click();
+                                        return;
+                                    }
+                                    document.getElementById("initial-rsvp-form").style.display = "none";
+                                    document.getElementById("rsvp-yes-details").style.display = "block";
+                                }
+                            </script>
                         </div>
 
-                        <div class="floater">
-                            <input class="check" type="checkbox" name="welcome_drinks" id="welcome_drinks"><label class="box" for="welcome_drinks"></label>
-                            <span class="weight-bold line-height-25">Welcome Drinks<br><em class="weight-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Friday</em></span>
-                        </div>
+                        <h3 class="line-height-60 margin-bottom-0" id="you-rsvped-yes">You’re the best!<br>Thanks for RSVP-ing.</h3>
+                        <h3 class="line-height-60 margin-bottom-0" id="you-rsvped-no">Say it ain’t so!<br>We’ll miss you. Thanks for<br>letting us know.</h3>
 
-                        <div class="floater">
-                            <input class="check" type="checkbox" name="wedding" id="wedding"><label class="box" for="wedding"></label>
-                            <span class="weight-bold line-height-25">The Wedding<br><em class="weight-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Saturday</em></span>
-                        </div>
-                        <div class="clearfix margin-bottom-70px"></div>
+                        <div id="rsvp-yes-details">
+                            <p class="margin-bottom-50px">We are so excited to celebrate with you! Please let us know<br>your plans and dietary needs.</p>
+                            <h4 class="margin-bottom-24px">I’ll be attending these events...</h4>
 
-                        <h4 class="margin-bottom-15px">I like my burgers...</h4>
-                        <div class="width-65">
-                            <div class="left-food">
-                                <input class="input input-small margin-bottom-10px" type="text" name="meat_initials" placeholder="please initial" autocomplete="off">
-                                <br>
+                            <div class="floater">
+                                <input class="check" type="checkbox" name="rehearsal_dinner" id="rehearsal_dinner"><label class="box" for="rehearsal_dinner"></label>
+                                <span class="weight-bold line-height-25">Rehearsal Dinner<br><em class="weight-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thursday</em></span>
+                            </div>
+
+                            <div class="floater">
+                                <input class="check" type="checkbox" name="welcome_drinks" id="welcome_drinks"><label class="box" for="welcome_drinks"></label>
+                                <span class="weight-bold line-height-25">Welcome Drinks<br><em class="weight-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Friday</em></span>
+                            </div>
+
+                            <div class="floater">
+                                <input class="check" type="checkbox" name="wedding" id="wedding" checked><label class="box" for="wedding"></label>
+                                <span class="weight-bold line-height-25">The Wedding<br><em class="weight-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Saturday</em></span>
+                            </div>
+
+                            <div class="clearfix margin-bottom-70px"></div>
+
+                            <div class="margin-bottom-50px">
+                                <h4 class="margin-bottom-25px">I like my burgers...</h4>
+                                <input class="input input-small margin-bottom-10px" type="text" name="meat_initials" placeholder="initial" autocomplete="off">
                                 <p class="centered weight-bold line-height-1p8">With meat, thanks!<br><em class="weight-300">( incl. pork )</em></p>
+                                <input class="input input-small margin-bottom-10px" type="text" name="veggie_initials" placeholder="initial" autocomplete="off">
+                                <p class="centered weight-bold line-height-1p8">Just veggies, please!<br><em class="weight-300">( vegetarian )</em></p>
                             </div>
-                            <div class="right-food">
-                                <input class="input input-small margin-bottom-10px" type="text" name="veggie_initials" placeholder="please initial" autocomplete="off">
-                                <br>
-                                <p class="centered weight-bold line-height-1p8">Just veggies, please!<br><em class="weight-300">(vegetarian)</em></p>
-                            </div>
-                            <div class="clearfix margin-bottom-50px"></div>
 
-                            <input type="hidden" name="_next" value="http://www.danandviv.com?rsvp#thanks" />
-                            <input type="hidden" name="_subject" value="Wedding RSVP Submission" />
-                            <button type="submit">Send response</button>
+                            <h3 class="input-overlay" id="ps">P.S.</h3>
+                            <input class="input margin-bottom-50px" type="text" name="note" id="note" placeholder="Leave us a note..." autocomplete="off">
+                            <br>
+
+                            <button type="submit" id="submit-yes-details" name="attending" value="YES">Send response</button>
+
                         </div>
                     </form>
                     <script>
-                        if (window.location.search === "?rsvp") {
-                            document.getElementById("you-rsvped").style.display = "block";
-                            document.getElementById("rsvp-form").style.display = "none";
+                        if (window.location.search === "?rsvp-no") {
+                            document.getElementById("you-rsvped-no").style.display = "block";
+                            document.getElementById("initial-rsvp-form").style.display = "none";
+                        }
+                        if (window.location.search === "?rsvp-yes") {
+                            document.getElementById("you-rsvped-yes").style.display = "block";
+                            document.getElementById("initial-rsvp-form").style.display = "none";
                         }
                     </script>
                 </div>
@@ -221,7 +271,7 @@
                 <a class="registry-img" href="https://www.zola.com/registry/danandviv" target="_blank"><img src="zola.png" width="183px"></a>
 
 
-                <p>We're still working on coding the site... check back soon!</p>
+                <p>We’re still working on coding the site... check back soon!</p>
                 <br><br><br><br>
             </section>
         </div>
