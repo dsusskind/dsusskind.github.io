@@ -95,14 +95,8 @@ a {
 }
 
 .left-hotels a {
-    font-family: "soleil",sans-serif;
-    font-weight: bold;
-    font-size: 18px;
-    letter-spacing:1.4px;
-    color: #ffffff;
-    text-decoration: none;
-    border-width: 0 0 2px 0;
-    border-color: #ffcabd;
+    border-width: 0 0 1px 0;
+    border-color: #ffffff;
     border-style: solid;
     padding-left: 1.4px;
 }
