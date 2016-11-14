@@ -171,9 +171,9 @@
 
                             <button type="button" onclick="continueRSVP()">Packing my bags!</button>
                             <script>
-                               
-                               function continueRSVP() {
-                                   /* removed because Safari doesn't support "required" validation 
+
+                                function continueRSVP() {
+                                    /* removed because Safari doesn't support "required" validation 
                                    if (!document.getElementById("guest-names").checkValidity() ||
                                         !document.getElementById("num-guests").checkValidity()) {
                                         // trigger validation failure by clicking submit
@@ -211,16 +211,20 @@
 
                             <div class="margin-bottom-25px">
                                 <h4 class="margin-bottom-25px">I like my burgers...</h4>
-                                <input class="input input-small margin-bottom-10px" type="text" id= "meat-initials" name="meat_initials" placeholder="initial" autocomplete="off" value="" onkeyup="this.setAttribute('value', this.value);">
-                                <p class="centered weight-bold line-height-1p8" id="meat-text">With meat, thanks!<br><em class="weight-300">( incl. pork )</em></p>
-                                <input class="input input-small margin-bottom-10px" type="text" name="veggie_initials" placeholder="initial" autocomplete="off" value="" onkeyup="this.setAttribute('value', this.value);">
-                                <p class="centered weight-bold line-height-1p8">Just veggies, please!<br><em class="weight-300">( vegetarian )</em></p>
+                                <div class="burger-div">
+                                    <input class="input input-small margin-bottom-10px" type="text" id= "meat-initials" name="meat_initials" placeholder="initial" autocomplete="off" value="" onkeyup="this.setAttribute('value', this.value);">
+                                    <p class="centered weight-bold line-height-1p8" id="meat-text">With meat, thanks!<br><em class="weight-300">( incl. pork )</em></p>
+                                </div>
+                                <div class="burger-div">
+                                    <input class="input input-small margin-bottom-10px" type="text" name="veggie_initials" placeholder="initial" autocomplete="off" value="" onkeyup="this.setAttribute('value', this.value);">
+                                    <p class="centered weight-bold line-height-1p8">Just veggies, please!<br><em class="weight-300">( vegetarian )</em></p>
+                                </div>
                             </div>
                             <br>
                             <h3 class="input-overlay" id="ps">P.S.</h3>
                             <input class="input margin-bottom-60px" type="text" name="note" id="note" placeholder="Leave us a note..." autocomplete="off">
                             <br>
-                            
+
                             <input type="hidden" name="_next" value="/?rsvp#thanks">
                             <input type="hidden" name="_subject" value="Wedding RSVP Submission">
                             <button type="submit" id="submit-yes-details" name="attending" value="YES">Send response</button>

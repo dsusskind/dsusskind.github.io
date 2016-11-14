@@ -459,20 +459,22 @@ letter-spacing: 1.5px;
     top: -42px;
 }
 
-/* for the second initials input */
+/* for the second initials input
 .input-small + p + .input-small {
     margin-left: 30px;
-}
+}*/
 
-/* burger input text */
+/* burger input text greyed out initially */
 .input-small + p{
     color: #737782;
 }
 
+/* burger understroke pink once text is entered */
 .input-small:not([value=""]) {
     border-color: #ffcadb;
 }
 
+/* burger text white once text is entered */
 .input-small:not([value=""]) + p {
     color: #ffffff;
 }
@@ -642,4 +644,23 @@ input#note {
     /* padding-left so that text doesn't go behind PS overlay */
     padding-left: 65px;
     width: 405px;
+}
+
+
+
+.burger-div {
+    display: inline-block;
+}
+
+/* second burger-div needs left margin */
+.burger-div + .burger-div {
+    margin-left: 30px;
+}
+
+.burger-div:hover p {
+    color: #ffffff;
+}
+
+.burger-div:hover input {
+    border-color: #ffcadb;
 }
