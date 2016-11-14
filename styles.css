@@ -91,7 +91,12 @@ a {
     color: #ffffff;
     margin: auto;
     text-align: center;
+}
 
+a:hover {
+    border-color: #ffcadb;
+    border-width: 0 0 4px 0;
+    border-style: solid;
 }
 
 .left-hotels a {
@@ -99,6 +104,12 @@ a {
     border-color: #ffffff;
     border-style: solid;
     padding-left: 1.4px;
+}
+
+.left-hotels a:hover {
+    border-color: #ffcadb;
+    border-width: 0 0 2px 0;
+    font-weight: 600;
 }
 
 .font-soleil {
@@ -293,7 +304,7 @@ nav li a {
     padding-left: 82px;
     padding-right: 41px;
     border-width: 0 0 0 1px;
-    border-color: #ffcabd;
+    border-color: #ffcadb;
     border-style: solid;
     -moz-border-image: -moz-linear-gradient(top, #ff86bb 0%, #ffe8e8 100%);
     -webkit-border-image: -webkit-linear-gradient(top, #ff86bb 0%, #ffe8e8 100%);
@@ -321,7 +332,7 @@ nav li a {
     float: left;
     width: 44.5%;
     border-width: 0 0 0 1px;
-    border-color: #ffcabd;
+    border-color: #ffcadb;
     border-style: solid;
     padding-top: 25px;
     padding-left:5%;
@@ -343,7 +354,7 @@ nav li a {
     float: left;
     width: 358px;
     border-width: 0 0 0 1px;
-    border-color: #ffcabd;
+    border-color: #ffcadb;
     border-style: solid;
     padding-left: 81px;
     -moz-border-image: -moz-linear-gradient(top, #ff86bb 0%, #ffe8e8 100%);
@@ -370,7 +381,7 @@ nav li a {
 
 .stroke {
     border-width: 0 0 4px 0;
-    border-color: #ffcabd;
+    border-color: #ffcadb;
     width: 80px;
 }
 
