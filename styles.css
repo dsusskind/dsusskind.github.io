@@ -613,6 +613,10 @@ input[type="checkbox"]:checked + label + span {
     display: block;
 }
 
+.registry-img:hover {
+    border: none;
+}
+
 footer {
     background: solid;
     background: -moz-linear-gradient(left bottom, #ff86bb 0%, #ffe8e8 100%);
