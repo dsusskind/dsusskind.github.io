@@ -41,7 +41,7 @@ h2 {
     font-weight: bold;
     letter-spacing: 4px;
     text-transform: uppercase;
-    height: 22px;
+    line-height: 22px;
     border-width: 0 0 4px 0;
     border-color: #ffcadb;
     border-style: solid;
@@ -329,7 +329,7 @@ a:hover {
     font-size: 34px;
     font-weight: normal;
     letter-spacing: 1.9px;
-    height: 39px;
+    line-height: 39px;
     margin: auto;
     margin-bottom: 25px;
 }
@@ -690,4 +690,83 @@ footer {
     background: -webkit-linear-gradient(left bottom, #ff86bb 0%, #ffe8e8 100%);
     background: linear-gradient(left bottom, #ff86bb 0%, #ffe8e8 100%);
     height: 40px;
+}
+
+
+/* MOBILE */
+@media (max-width: 700px) {
+
+    body {
+        margin: 0px 20px;
+        font-size: 16px;
+    }
+
+    h3 {
+        font-size: 34px;
+    }
+
+    p {
+        line-height: 30px;
+    }
+
+    #content {
+        width: 100%;
+        min-width: 200px;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    #our-story {
+        width: 100%;
+    }
+
+    #our-story p {
+        line-height: 30px;
+        font-size: 16px;
+    }
+
+    #events {
+        width: 100%;
+    }
+
+    /* keep understroke width short since it wraps on two lines */
+    #events h2 {
+        width: 200px;
+        line-height: 28px;
+    }
+
+    #events .left, #events .right {
+        float: none;
+        width: 100%;
+        padding: 0 0 0 0;
+        border: none;
+    }
+
+    #events .left {
+        margin-bottom: 150px;
+    }
+
+    #events #attire p {
+        line-height: 30px;
+    }
+
+    #hotels {
+        width: 100%;
+    }
+
+    #hotels p.intro-text {
+        width: 100%;
+    }
+
+    #hotels #hotel-block {
+        width: 100%;
+        padding: 0 0 0 0;
+    }
+
+    #hotels .left, #hotels .right {
+        float: none;
+        width: 100%;
+        padding: 0 0 0 0;
+        border: none;
+    }
 }
