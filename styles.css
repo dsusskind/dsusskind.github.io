@@ -21,6 +21,12 @@ nav {
     display: none;
 }
 
+/* prevent iOS event links for dates */
+span.nolink a {
+    text-decoration: none;
+    pointer-events: none;
+}
+
 /* set default text styles for page */
 body {
     font-family: "soleil", sans-serif;
@@ -251,7 +257,6 @@ a:hover {
     margin-bottom: 64px;
 }
 
-
 #hotels p#rooms-available-at {
     font-weight: bold;
     line-height: 25px;
@@ -296,7 +301,7 @@ a:hover {
     margin-bottom: 12px;
 }
 
-#hotels #hotel-block a{
+#hotels #hotel-block a.hotel-link {
     border-width: 0 0 1px 0;
     border-color: #ffffff;
     border-style: solid;
@@ -384,7 +389,7 @@ a:hover {
     margin-bottom: 50px;
 }
 
-#things-to-do a {
+#things-to-do a.things-link {
     font-size: 22px;
     font-weight: bold;
     letter-spacing: 1.8px;
@@ -420,6 +425,10 @@ a:hover {
 #rsvp p.intro-text {
     letter-spacing: 1.5px;
     margin-bottom: 22px;
+}
+
+#rsvp p.small-mobile-only {
+    display: none;
 }
 
 #rsvp .input-overlay {
@@ -499,6 +508,10 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     background: linear-gradient(left bottom, #ff86bb 0%, #ffe8e8 100%);*/
 }
 
+#rsvp button.mobile-only {
+    display: none;
+}
+
 #you-rsvped, #rsvp-yes-details {
     display: none;
     margin-bottom: 162px;
@@ -506,6 +519,10 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 
 #rsvp #rsvp-yes-details p.intro-text {
     margin-bottom: 61px;
+}
+
+#rsvp #rsvp-yes-details p.mobile-only {
+    display: none;
 }
 
 #rsvp #rsvp-yes-details h4 {
@@ -543,9 +560,11 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     margin-right: 15px;
 }
 
-/* turn label checkbox pink on hover over the box/text */
-#rsvp #rsvp-yes-details .checkbox-block:hover label {
-    border-color: #ffcadb;
+/* turn label checkbox pink on hover over the box/text, for desktop only */
+@media (min-width: 701px) {
+    #rsvp #rsvp-yes-details .checkbox-block:hover label {
+        border-color: #ffcadb;
+    }
 }
 
 /* use image when checked */
@@ -572,9 +591,11 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     font-style: italic;
 }
 
-/* turn checkbox text white on hover */
-#rsvp #rsvp-yes-details .checkbox-block:hover span {
-    color: #ffffff;
+/* turn checkbox text white on hover, for desktop only */
+@media (min-width: 701px) {
+    #rsvp #rsvp-yes-details .checkbox-block:hover span {
+        color: #ffffff;
+    }
 }
 
 /* turn checkbox text white when checked */
@@ -623,14 +644,18 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     font-style: italic;
 }
 
-/* turn input box pink on hover */
-#rsvp #rsvp-yes-details #rsvp-burger-block div:hover input {
-    border-color: #ffcadb;
+/* turn input box pink on hover, for desktop only */
+@media (min-width: 701px) {
+    #rsvp #rsvp-yes-details #rsvp-burger-block div:hover input {
+        border-color: #ffcadb;
+    }
 }
 
-/* turn text white on hover */
-#rsvp #rsvp-yes-details #rsvp-burger-block div:hover p {
-    color: #ffffff;
+/* turn text white on hover, for desktop only */
+@media (min-width: 701px) {
+    #rsvp #rsvp-yes-details #rsvp-burger-block div:hover p {
+        color: #ffffff;
+    }
 }
 
 /* turn input box pink once text is entered */
@@ -671,6 +696,10 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     margin-bottom: 79px;
 }
 
+#registry p.mobile-only {
+    display: none;
+}
+
 #registry a.registry-img {
     margin-bottom: 70px;
     display: block;
@@ -703,6 +732,10 @@ footer {
 
     h3 {
         font-size: 34px;
+    }
+
+    h4 {
+
     }
 
     p {
@@ -768,5 +801,140 @@ footer {
         width: 100%;
         padding: 0 0 0 0;
         border: none;
+    }
+
+    #hotels a.other-hotels {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    #things-to-do {
+        width: 100%;
+    }
+
+    #things-to-do p.intro-text {
+        width: 100%;
+    }
+
+    #things-to-do h3 {
+        line-height: 40px;
+        margin-bottom: 25px;
+    }
+
+    #things-to-do-block {
+        width: 100%;
+    }
+
+    #things-to-do .left, #things-to-do .right {
+        float: none;
+        width: 100%;
+        padding: 0 0 0 0;
+        border: none;
+    }
+
+    #things-to-do .left p, #things-to-do .right p {
+        line-height: 30px;
+        margin-bottom: 50px;
+    }
+
+    /* if device is smaller than 375 change the rsvp intro text since it won't fit on one line */
+    @media (max-width: 402px) {
+        #rsvp p.desktop-or-big-mobile {
+            display: none;
+        }
+        #rsvp p.small-mobile-only {
+            display: block;
+        }
+    }
+
+    #rsvp .input {
+        width: 100%;
+        max-width: 444px;
+    }
+
+    #rsvp input#num-guests {
+        width: 100%;
+        max-width: 231px;
+    }
+
+    #rsvp button {
+        display: block;
+        margin: auto;
+        padding: 0 0 0 0;
+        margin-bottom: 35px;
+    }
+
+    #rsvp button.desktop-only {
+        display: none;
+    }
+
+    #rsvp button.mobile-only {
+        display: block;
+    }
+
+    /* if device is small make the rsvp text narrower for better line break */
+    @media (max-width: 427px) {
+        #you-rsvped {
+            width: 318px;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    #rsvp #rsvp-yes-details p.desktop-only {
+        display: none;
+    }
+
+    #rsvp #rsvp-yes-details p.mobile-only {
+        display: block;
+        width: 100%;
+    }
+
+    #rsvp #rsvp-yes-details #rsvp-events-block {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 24px;
+    }
+
+    #rsvp #rsvp-yes-details .checkbox-block {
+        float: none;
+        margin-bottom: 25px;
+    }
+
+    #rsvp #rsvp-yes-details #rsvp-burger-block div {
+        /* change to block in order to align left */
+        display: block;
+        text-align: left;
+        margin-left: 40px;
+    }
+
+    #rsvp #rsvp-yes-details #rsvp-burger-block div.second {
+        margin-left: 40px;
+    }
+
+    #rsvp #rsvp-yes-details .input#note {
+        /* account for 65px padding in the width */
+        width: calc(100% - 65px);
+        max-width: calc(405px - 65px);
+    }
+
+    #registry p.mobile-only {
+        display: block;
+    }
+
+    #registry p.desktop-only {
+        display: none;
+    }
+
+    #registry img {
+        max-width: 100%;
+    }
+
+    /* force footer to go to edges outside body margin */
+    footer {
+        width: calc(100% + 40px);
+        position: relative;
+        left: -20px;
     }
 }
