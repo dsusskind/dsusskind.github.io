@@ -522,7 +522,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     background: transparent;
     border-style: solid;
     border-width: 4px;
-    border-color: #43578A;
+    border-color: #20408a;
     font-family: "soleil", sans-serif;
     font-weight: bold;
     font-size: 16px;
@@ -593,7 +593,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 /* style the label as the checkbox */
 #rsvp #rsvp-yes-details input[type="checkbox"] + label {
     cursor: pointer;
-    border: solid 2px #43578A;
+    border: solid 2px #20408a;
     position: relative;
     display: inline-block;
     width: 21px;
@@ -621,7 +621,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 }
 
 #rsvp #rsvp-yes-details .checkbox-block span {
-    color: #43578A;
+    color: #20408a;
     display: inline-block;
     font-weight: bold;
     letter-spacing: 1.5px;
@@ -663,7 +663,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 /* make input boxes smaller */
 #rsvp #rsvp-yes-details #rsvp-burger-block input {
     border-image: none;
-    border-color: #43578A;
+    border-color: #20408a;
     padding-left: 0px;
     width: 50px;
     margin-top: 0px;
@@ -674,7 +674,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 
 /* grey out text initially */
 #rsvp #rsvp-yes-details #rsvp-burger-block p {
-    color: #43578A;
+    color: #20408a;
     display: inline-block;
     font-weight: bold;
     letter-spacing: 1.5px;
