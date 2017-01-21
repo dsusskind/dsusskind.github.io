@@ -37,8 +37,13 @@ body {
     color: #ffffff;
     margin: auto;
     text-align: center;
-    /*background-color: #1d1f26;*/
-    background-color: #0e1d41;
+    /*background-color: #0e1d41;*/
+    background-color: #0B1846;
+    overflow-x: hidden;
+}
+
+.mobile-only {
+    display: none;
 }
 
 /* h2 is for section headings */
@@ -50,7 +55,7 @@ h2 {
     text-transform: uppercase;
     line-height: 22px;
     border-width: 0 0 4px 0;
-    border-color: #ffcadb;
+    border-color: #20408a;
     border-style: solid;
     /* padding-left keeps the understroke centerd due to letter-spacing */
     padding-left: 4px;
@@ -102,14 +107,25 @@ a {
 }
 
 a:hover {
-    border-color: #ffcadb;
+    border-color: #20408a;
 }
 
 
 /* HEADER */
 
+#header-bg img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#header-bg img.mobile-only {
+    display: none;
+}
+
 #header-img {
-    margin-top: 170px;
+    margin-top: 118px;
     margin-bottom: 180px;
 }
 
@@ -134,7 +150,7 @@ a:hover {
     font-size: 18px;
     font-weight: 500;
     letter-spacing: 1.5px;
-    line-height: 52px;
+    line-height: 44px;
 }
 
 
@@ -313,7 +329,7 @@ a:hover {
 }
 
 #hotels #hotel-block a:hover {
-    border-color: #ffcadb;
+    border-color: #20408a;
     border-width: 0 0 2px 0;
     font-weight: 600;
 }
@@ -444,7 +460,7 @@ a:hover {
     background: transparent;
     border-style: solid;
     padding-left: 0px;
-    border-color: #ffcadb;
+    border-color: #20408a;
     border-width: 0 0 2px 0;
     /*-moz-border-image: -moz-linear-gradient(left, #ff86bb 0%, #ffe8e8 100%);
     -webkit-border-image: -webkit-linear-gradient(left, #ff86bb 0%, #ffe8e8 100%);
@@ -463,6 +479,24 @@ a:hover {
     -webkit-border-radius: 0;
     border-radius: 0;
 }
+
+/* set placeholder text white */
+::-webkit-input-placeholder {
+    color: #ffffff;
+    opacity: 1;
+}
+input:-moz-placeholder {
+    color: #ffffff;
+    opacity: 1;
+} /* FF 4-18 */
+input::-moz-placeholder {
+    color: #ffffff;
+    opacity: 1;
+} /* FF 19+ */
+input:-ms-input-placeholder {
+    color: #ffffff;
+    opacity: 1;
+} /* IE 10+ */
 
 /* make input placeholder text disappear once focused */
 input:focus::-webkit-input-placeholder { color: transparent; }
@@ -484,7 +518,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     background: transparent;
     border-style: solid;
     border-width: 4px;
-    border-color: #3d3f45;
+    border-color: #26355c;
     font-family: "soleil", sans-serif;
     font-weight: bold;
     font-size: 16px;
@@ -506,7 +540,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 
 #rsvp button:hover {
     background: solid;
-    border-color: #ffcadb;
+    border-color: #ffffff;
     /*background: -moz-linear-gradient(left bottom, #ff86bb 0%, #ffe8e8 100%);
     background: -webkit-linear-gradient(left bottom, #ff86bb 0%, #ffe8e8 100%);
     background: linear-gradient(left bottom, #ff86bb 0%, #ffe8e8 100%);*/
@@ -522,7 +556,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 }
 
 #rsvp #rsvp-yes-details p.intro-text {
-    margin-bottom: 61px;
+    margin-bottom: 30px;
 }
 
 #rsvp #rsvp-yes-details p.mobile-only {
@@ -555,7 +589,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 /* style the label as the checkbox */
 #rsvp #rsvp-yes-details input[type="checkbox"] + label {
     cursor: pointer;
-    border: solid 2px #737782;
+    border: solid 2px #43578A;
     position: relative;
     display: inline-block;
     width: 21px;
@@ -564,10 +598,10 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     margin-right: 15px;
 }
 
-/* turn label checkbox pink on hover over the box/text, for desktop only */
+/* turn label checkbox white on hover over the box/text, for desktop only */
 @media (min-width: 701px) {
     #rsvp #rsvp-yes-details .checkbox-block:hover label {
-        border-color: #ffcadb;
+        border-color: #ffffff;
     }
 }
 
@@ -583,7 +617,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 }
 
 #rsvp #rsvp-yes-details .checkbox-block span {
-    color: #737782;
+    color: #43578A;
     display: inline-block;
     font-weight: bold;
     letter-spacing: 1.5px;
@@ -625,7 +659,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 /* make input boxes smaller */
 #rsvp #rsvp-yes-details #rsvp-burger-block input {
     border-image: none;
-    border-color: #737782;
+    border-color: #43578A;
     padding-left: 0px;
     width: 50px;
     margin-top: 0px;
@@ -636,7 +670,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 
 /* grey out text initially */
 #rsvp #rsvp-yes-details #rsvp-burger-block p {
-    color: #737782;
+    color: #43578A;
     display: inline-block;
     font-weight: bold;
     letter-spacing: 1.5px;
@@ -648,10 +682,10 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     font-style: italic;
 }
 
-/* turn input box pink on hover, for desktop only */
+/* turn input box white on hover, for desktop only */
 @media (min-width: 701px) {
     #rsvp #rsvp-yes-details #rsvp-burger-block div:hover input {
-        border-color: #ffcadb;
+        border-color: #ffffff;
     }
 }
 
@@ -662,9 +696,9 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     }
 }
 
-/* turn input box pink once text is entered */
+/* turn input box white once text is entered */
 #rsvp #rsvp-yes-details #rsvp-burger-block input:not([value=""]) {
-    border-color: #ffcadb;
+    border-color: #ffffff;
 }
 
 
@@ -718,7 +752,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 /* FOOTER */
 
 footer {
-    background-color: #ffcadb;
+    background-color: #20408a;
     /*background: solid;
     background: -moz-linear-gradient(left bottom, #ff86bb 0%, #ffe8e8 100%);
     background: -webkit-linear-gradient(left bottom, #ff86bb 0%, #ffe8e8 100%);
@@ -730,29 +764,38 @@ footer {
 /* MOBILE */
 @media (max-width: 700px) {
 
-    br.desktop-only {
+    .desktop-only {
         display: none;
+    }
+    
+    .mobile-only {
+        display: block;
     }
     
     body {
         margin: 0px 20px;
-        font-size: 16px;
+        font-size: 18px;
     }
 
     h2 {
-        margin-bottom: 34px;
+        margin: 0 20 0 0;
+        font-size: 14px;
     }
     
     h3 {
-        font-size: 34px;
+        font-size: 26px;
+        letter-spacing: 1.5px;
+        margin: -16px 0;
     }
 
-    h4 {
 
+
+    h5 {
+        margin: 16px 0;
     }
-
     p {
         line-height: 30px;
+        font-size: 14px;
     }
 
     #content {
@@ -762,10 +805,25 @@ footer {
         margin: 0 auto;
     }
     
-    #header-img {
-        margin-top: 70px;
-        margin-bottom: 100px;
+    #header-bg img.mobile-only {
+        display: block;
     }
+    
+    #header-bg img.desktop-only {
+        display: none;
+    }
+    
+    #header {
+        height: 251px;
+    }
+    
+    #header-img-mobile {
+        width: calc(100% + 40px);
+        position: relative;
+        left: -20px;
+        margin-bottom: 51px;
+    }
+    
 
     #our-story {
         width: 100%;
@@ -777,8 +835,9 @@ footer {
     }
     
     #our-story p {
-        line-height: 30px;
-        font-size: 16px;
+        margin-top: -15px;
+        line-height: 27px;
+        font-size: 14px;
     }
 
     #events {
@@ -787,10 +846,19 @@ footer {
     }
 
     /* keep understroke width short since it wraps, and set height and overflow hidden to hide second line */
+    
+    
+#events .event-title {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1.8px;
+}
+
+    
     #events h2 {
-        width: 200px;
+        width: 181px;
         line-height: 28px;
-        margin-bottom: 62px;
+        margin-bottom: 28px;
         height: 26px;
         overflow: hidden;
     }
@@ -803,15 +871,21 @@ footer {
     }
 
     #events .events-dates p {
-        line-height: 35px;
+        line-height: 30px;
+        font-size: 14px;
+    }
+    
+    #events em {
+        font-size: 14px;
+        line-height: 30px;
     }
     
     #events #welcome-drinks {
         margin-bottom: 62px;
     }
     
-    #events #rehearsal-dinner h3, #events #welcome-drinks h3, #events #ceremony h3 {
-        margin-bottom: 25px;
+    #events #rehearsal-dinner h3, #events #welcome-drinks h3, #events #ceremony h3, #events #attire h4 {
+        margin-bottom: -6px;
     }
     
     #events .left {
@@ -824,21 +898,31 @@ footer {
     
     #events #attire p {
         line-height: 30px;
+        font-size: 14px;
+        width: 86%;
+        margin: auto;
     }
 
     #hotels {
         width: 100%;
-        margin-bottom: 150px;
+        margin-bottom: 100px;
     }
 
     #hotels h2 {
-        margin-bottom: 62px;
+        margin-bottom: 24px;
     }
     
+    #hotels #hotel-block h4 {
+        font-size: 30px;
+    }
+
     #hotels p.intro-text {
         width: 100%;
     }
 
+    #hotels p.other-hotels {
+        margin-bottom: 20px;
+    }
     #hotels p#rooms-available-at {
         margin-bottom: 24px;
     }
@@ -860,26 +944,27 @@ footer {
     }
 
     #hotels a.other-hotels {
-        font-size: 28px;
-        margin-bottom: 15px;
+        font-size: 26px;
+        margin-bottom: 12px;
     }
 
     #things-to-do {
         width: 100%;
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
     
     #things-to-do h2 {
-        margin-bottom: 50px;
+        margin-bottom: 24px;
     }
 
     #things-to-do p.intro-text {
         width: 100%;
+        margin-bottom: 20px;
     }
 
     #things-to-do h3 {
         line-height: 40px;
-        margin-bottom: 40px;
+        margin-bottom: 22px;
     }
 
     #things-to-do-block {
@@ -889,20 +974,27 @@ footer {
     #things-to-do .left, #things-to-do .right {
         float: none;
         width: 100%;
-        padding: 0 0 0 0;
+        padding: 35px 0 0 0;
         border: none;
     }
 
     #things-to-do .left p, #things-to-do .right p {
         line-height: 30px;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
     }
     
     #things-to-do .left p:last-child {
         margin-bottom: 75px;
     }
 
+    #things-to-do a.things-link {
+        font-size: 20px;
+        line-height: 43px;
+    }
+    
+    
     /* if device is smaller than 375 change the rsvp intro text since it won't fit on one line */
+    
     @media (max-width: 402px) {
         #rsvp p.desktop-or-big-mobile {
             display: none;
@@ -912,21 +1004,36 @@ footer {
         }
     }
 
+    #rsvp #initial-rsvp-form {
+        margin-bottom: 88px;
+    }
+    
     #rsvp .input {
         width: 100%;
         max-width: 444px;
     }
 
+    #rsvp p.intro-text {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    #rsvp .input-overlay {
+        font-size: 30px;
+        margin-top: 4px;
+    }
+    
     #rsvp input#num-guests {
         width: 100%;
         max-width: 231px;
+        margin-bottom: 50px;
     }
 
     #rsvp button {
         display: block;
         margin: auto;
         padding: 0 0 0 0;
-        margin-bottom: 35px;
+        margin-bottom: 27px;
     }
 
     #rsvp button.desktop-only {
@@ -956,6 +1063,10 @@ footer {
         width: 100%;
     }
 
+    #rsvp h4 {
+        font-size: 26px;
+    }
+    
     #rsvp #rsvp-yes-details #rsvp-events-block {
         width: 100%;
         margin: auto;
@@ -965,8 +1076,13 @@ footer {
     #rsvp #rsvp-yes-details .checkbox-block {
         float: none;
         margin-bottom: 25px;
+        padding-left: 60px;
     }
 
+    #rsvp #rsvp-yes-details #rsvp-burger-block {
+        margin-bottom: 0px;
+    }
+    
     #rsvp #rsvp-yes-details #rsvp-burger-block div {
         /* change to block in order to align left */
         display: block;
@@ -982,6 +1098,7 @@ footer {
         /* account for 65px padding in the width */
         width: calc(100% - 65px);
         max-width: calc(405px - 65px);
+        margin-bottom: 50px;
     }
 
     #registry p.mobile-only {
