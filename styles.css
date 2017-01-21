@@ -38,6 +38,7 @@ body {
     margin: auto;
     text-align: center;
     background-color: #1d1f26;
+    /*background-color: #253e7b;*/
 }
 
 /* h2 is for section headings */
@@ -186,11 +187,13 @@ a:hover {
     line-height: 40px;
 }
 
+/*
 #events #rehearsal-dinner .event-time {
     font-family: "abril-fatface", serif;
     font-size: 22px;
     letter-spacing: 1.7px;
 }
+*/
 
 #events .event-time {
     font-family: "abril-fatface", serif;
@@ -727,6 +730,10 @@ footer {
 /* MOBILE */
 @media (max-width: 700px) {
 
+    br.desktop-only {
+        display: none;
+    }
+    
     body {
         margin: 0px 20px;
         font-size: 16px;
