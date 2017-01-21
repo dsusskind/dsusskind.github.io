@@ -126,7 +126,7 @@ a:hover {
 
 #header-img {
     margin-top: 118px;
-    margin-bottom: 180px;
+    margin-bottom: 212px;
 }
 
 
@@ -366,6 +366,10 @@ a:hover {
     margin-bottom: 214px;
 }
 
+#things-to-do img {
+    margin-bottom: 30px;
+}
+
 #things-to-do h2 {
     margin-bottom: 26px;
 }
@@ -518,7 +522,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     background: transparent;
     border-style: solid;
     border-width: 4px;
-    border-color: #26355c;
+    border-color: #43578A;
     font-family: "soleil", sans-serif;
     font-weight: bold;
     font-size: 16px;
@@ -739,7 +743,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 }
 
 #registry a.registry-img {
-    margin-bottom: 70px;
+    margin-bottom: 49px;
     display: block;
 }
 
@@ -949,7 +953,7 @@ footer {
     }
 
     #things-to-do {
-        width: 100%;
+        width: 90%;
         margin-bottom: 50px;
     }
     
@@ -992,7 +996,11 @@ footer {
         line-height: 43px;
     }
     
-    
+    #things-to-do img {
+        width: 150px;
+        margin-bottom: 40px;
+}
+
     /* if device is smaller than 375 change the rsvp intro text since it won't fit on one line */
     
     @media (max-width: 402px) {
@@ -1111,7 +1119,7 @@ footer {
 
     #registry a.registry-img {
         width: 75%;
-        margin-bottom: 50px;
+        margin-bottom: 37px;
     }
     
     #registry a.registry-img#bloomingdales {
