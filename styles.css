@@ -761,6 +761,10 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     border-color: transparent;
 }
 
+#registry a.registry-img#bloomingdales {
+    margin-bottom: 40px;
+}
+
 
 /* FOOTER */
 
@@ -790,8 +794,8 @@ footer {
         font-size: 18px;
         overflow-x: hidden;
     }
-    
-    
+
+
     h2 {
         margin: 0 20 0 0;
         font-size: 14px;
@@ -806,7 +810,7 @@ footer {
     h5 {
         margin: 16px 0;
     }
-    
+
     p {
         line-height: 30px;
         font-size: 14px;
@@ -820,7 +824,7 @@ footer {
         padding: 0 20px;
         overflow-x: hidden;
     }
-    
+
     #wrapper {
         overflow-x: hidden;
     }
@@ -1136,10 +1140,6 @@ footer {
     #registry a.registry-img {
         width: 75%;
         margin-bottom: 37px;
-    }
-
-    #registry a.registry-img#bloomingdales {
-        margin-bottom: 40px;
     }
 
     #registry img {
