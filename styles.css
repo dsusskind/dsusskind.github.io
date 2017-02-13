@@ -134,10 +134,15 @@ a:hover {
 }
 
 #header-img {
-    margin-top: 118px;
-    margin-bottom: 212px;
+    margin-top: 90px;
+    margin-bottom: 14px;
 }
 
+#hashtag {
+    margin-bottom: 192px;
+    letter-spacing: 5px;
+    font-size: 14px;
+}
 
 /* STORY */
 
