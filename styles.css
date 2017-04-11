@@ -915,11 +915,15 @@ footer {
     #events h2 {
         width: 181px;
         line-height: 28px;
-        margin-bottom: 28px;
+        margin-bottom: 10px;
         height: 26px;
         overflow: hidden;
     }
 
+    #events #event-map {
+        line-height: 25px;
+    }
+    
     #events .left, #events .right {
         float: none;
         width: 100%;
