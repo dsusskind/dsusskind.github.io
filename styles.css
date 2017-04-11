@@ -200,11 +200,26 @@ a:hover {
 }
 
 .wrapper {
-    /* no actual styling, wrapper just keeps insides from floating around preceding elements */
+    /* wrapper keeps insides from floating around preceding elements */
+    margin-top: 70px;
 }
 
 #events h2 {
-    margin-bottom: 70px;
+    /*margin-bottom: 70px;*/
+    margin-bottom: 10px;
+}
+
+#events p a {
+    border-width: 0 0 1px 0;
+    border-color: #ffffff;
+    border-style: solid;
+    /* left padding to keep understroke center with letter spacing */
+    padding-left: 1.4px;
+}
+
+#events p a:hover {
+    border-color: #20408a;
+    border-width: 0 0 2px 0;
 }
 
 #events .event-title {
@@ -265,7 +280,7 @@ letter-spacing: 1.7px;
 #events #attire {
     /* top margin to align with left half */
     margin-top: 18px;
-    margin-bottom: 51px;
+    margin-bottom: 30px;
 }
 
 
@@ -393,6 +408,19 @@ letter-spacing: 1.7px;
     margin: auto;
     letter-spacing: 1.5px;
     margin-bottom: 65px;
+}
+
+#things-to-do p.intro-text a {
+    border-width: 0 0 1px 0;
+    border-color: #ffffff;
+    border-style: solid;
+    /* left padding to keep understroke center with letter spacing */
+    padding-left: 1.4px;
+}
+
+#things-to-do p.intro-text a:hover {
+    border-color: #20408a;
+    border-width: 0 0 2px 0;
 }
 
 #things-to-do-block {
@@ -932,6 +960,11 @@ footer {
         margin: auto;
     }
 
+    #events #train #conch-p {
+        width: 86%;
+        margin: auto;
+    }
+    
     #hotels {
         width: 100%;
         margin-bottom: 100px;
